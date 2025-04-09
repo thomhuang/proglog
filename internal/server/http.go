@@ -46,6 +46,8 @@ type ConsumeResponse struct {
 	Record Record `json:"record"`
 }
 
+// standard GET/POST methods ...
+
 func (s *httpServer) handleProduce(w http.ResponseWriter, r *http.Request) {
 	var req ProduceRequest
 	err := json.NewDecoder(r.Body).Decode(&req)
