@@ -71,7 +71,7 @@ func (i *index) Close() error {
 	}
 
 	if err := i.file.Truncate(int64(i.size)); err != nil {
-		return nil
+		return err
 	}
 
 	return i.file.Close()
